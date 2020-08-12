@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sets</title>
+</head>
+<body>
+<script>
+//💥💥💥💥💥💥💥💥 Sets Examples 💥💥💥💥💥💥💥
+
+// 💛💛💛💛
+// Example 1 💛       /*Instance methods*/
+// 💛💛💛💛         ---------------------
+  const friends = new Set();
+  friends.add('Ahmed');
+  friends.add('Motawea');
+  friends.add('Ghada');
+  friends.add('Dina');
+  friends.add('Maged');
+  friends.add('weam');
+  // for (const friend of  friends) {
+  //   console.log(friend);
+  // }
+  // console.log("Has Ex:",friends.has('Maged'));
+  // console.log("Delete Ex:",friends.delete('Maged'));
+  // console.log("Size Ex:",friends.size);
+  // friends.clear();
+  // console.log("Clear Ex:",friends);
+
+//********************************************************
+// 💛💛💛💛
+// Example 2 💛
+// 💛💛💛💛   
+// Add set value in the inisialization step.
+  const students = new Set(['Wes', 'Kara', 'Tony']);
+  // console.log(students);
+  const dogs = ['Snickers', 'Sunny'];
+  const dogSet = new Set(dogs);
+//********************************************************
+// 💛💛💛💛
+// Example 3 💛       /* Iteration methods */
+// 💛💛💛💛          ---------------------
+const session = new Set();
+  // as people start coming in
+  function logSetElements(key, value,set) {
+  console.log(`the 🔑= ${key} && the value = ${value}`);
+}
+//-----------------------------------------------
+  session.add('Ahmed');
+  session.add('Ghada');
+  session.add('Maged');
+  // console.log("Set keys",session.keys());
+  // const temp = session.values();
+  // console.log("Set entries",session.entries());
+  // console.log("Set entries",session.forEach(logSetElements));
+ //-------------------------------------------------
+  // ready to start!
+  // const participant = session.values();
+  // console.log(participant.next().value);
+  // console.log(participant.next().value);
+  // session.add('Dina');
+  // session.add('Weam');
+  // console.log(participant.next().value);
+  // console.log(participant.next().value);
+  // console.log(participant.next().value);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proxies!</title>
+</head>
+<body>
+<script>
+//💥💥💥💥💥💥💥💥 Proxies Examples 💥💥💥💥💥💥💥
+
+// 💛💛💛💛
+// Example 1 💛
+// 💛💛💛💛
+
+const target = {
+  company1: "flairstech 🤖",
+  company2: "upland 🤠"
+};
+
+const handler2 = {
+  get: function(target, key) {
+    return "Google 😎";
+  }
+};
+
+const proxy2 = new Proxy(target, handler2);
+
+// console.log(proxy2.company1); 
+// console.log(proxy2.company2); 
+//********************************************************
+// 💛💛💛💛
+// Example 2 💛
+// 💛💛💛💛
+
+const handler = {
+  get (target, key) {
+    return key in target ? target[key] : 37;
+    }
+};
+
+let p = new Proxy({}, handler);
+p.a = 1;
+p.b = undefined;
+
+// console.log(p.a, p.b);
+// console.log('c' in p, p.c);
+//********************************************************
+// 💛💛💛💛
+// Example 3 💛
+// 💛💛💛💛
+
+let validator = {
+  set: function(obj, prop, value) {
+    if (prop === 'age') {
+      if (typeof value !== 'number' || Number.isNaN(value)) {
+        console.log('Age must be a number');
+        return;
+      }
+      if (value < 0) {
+        console.log('Age must be a positive number');
+        return;
+      }
+    }
+    obj[prop] = value;
+  
+    return true;
+  }
+};
+
+let person = new Proxy({}, validator);
+// person.age = 'young';
+// console.log(person.age);
+// person.age = -30;
+// console.log(person.age);
+person.age = 100;
+console.log(person.age)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Example 2
+// let validator = {
+//   set: function(obj, prop, value) {
+//     if (prop === 'age') {
+//       if (typeof value !== 'number' || Number.isNaN(value)) {
+//         console.log('Age must be a number')
+//       }
+//       if (value < 0) {
+//         console.log('Age must be a positive number')
+//       }
+//     }
+
+//     obj[prop] = value;
+  
+//     return true;
+//   }
+// };
+
+// let person = new Proxy({}, validator);
+// person.age = 'young';
+// console.log(person.age)
+// person.age = -30;
+// person.age = 100;
+// console.log(person.age)
+
+
+
+</script>
+</body>
+</html>

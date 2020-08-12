@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maps!</title>
+</head>
+<body>
+<script>
+  //💥💥💥💥💥💥💥💥 Maps Examples 💥💥💥💥💥💥💥
+
+// 💛💛💛💛
+// Example 1 💛       /*Instance methods*/
+// 💛💛💛💛         ---------------------
+  const dogs = new Map();
+  const obj = {name:'abdo'};
+  dogs.set(obj);
+  dogs.set({name:'abdo'});
+  dogs.set('max', 10);
+  
+  // for (const dog of dogs) {
+  //   console.log(dog);
+  // }
+  // dogs.forEach((val, key) => console.log(key, val));
+  // console.log("Has Ex:",dogs.has('max'));
+  // console.log("Get Ex:",dogs.get('max'));
+  // console.log("Delete Ex:",dogs.delete('max'));
+  // console.log("Size Ex:",dogs.size);
+  // dogs.clear();
+  // console.log("Clear Ex:",dogs);
+  //********************************************************
+// 💛💛💛💛
+// Example 2 💛       /* Iteration methods */
+// 💛💛💛💛          ---------------------
+let myMap = new Map()
+myMap.set(0, 'zero')
+myMap.set(1, 'one')
+for (let key of myMap.keys()) {
+  // console.log(key);
+}
+
+for (let value of myMap.values()) {
+  // console.log(value);
+}
+for (let [key, value] of myMap.entries()) {
+  console.log(key + ' = ' + value);
+}
+
+</script>
+</body>
+</html>
